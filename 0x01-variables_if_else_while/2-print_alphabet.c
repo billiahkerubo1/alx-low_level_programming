@@ -1,11 +1,9 @@
 #include <stdio.h>
-int main()
+int main(void)
 {
-	char ch = 'a';
-	while (ch <= 'z')
-	{
-		putchar(ch);
-		ch++;
-	}
+	char letter;
+	for (letter = 'a'; letter <= 'z'; letter++)
+		putchar(letter);
+	putchar('\n');
 	return (0);
 }
