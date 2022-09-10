@@ -1,22 +1,29 @@
 #include <stdio.h>
+#include <stdlib.h>
 #include <time.h>
 int main(void)
 {
-	int n,digit;
+	int n;
 	srand(time(0));
 	n = rand()-RAND_MAX / 2;
-	printf("Enter the digit: ");
-	scanf("%d",$n);
+	if ((n % 10) > 5)
+	{
+		printf("Last digit of %d is %d and is greater than 5\n",
 
-	digit = n % 10;
-	printf("Last digit of n is: %d", n, digit);
-	printf(n);
-	
-	if (digit > 5){
-		printf("Last digit of n is %d,n, and is greater than 5");
-	
-	}else if (digit == 0){
-		printf("Last digit of n is %d,n and is 0")
-	}else(digit < 6 and digit != 0){
-		printf("Last digit of n is %d, n, and is less than 6 and not 0")}
-}
+							n, n % 10);
+	}
+	else if ((n % 10) < 6 && (n % 10) != 0)
+	{
+		printf("Last digit of %d is %d and is less than 6 and not 0\n",
+
+							n, n % 10);
+	}
+	else
+	{
+		printf("Last digit of %d is %d and is 0\n",
+
+							n, n % 10);
+	}
+	return (0);
+
+}	
