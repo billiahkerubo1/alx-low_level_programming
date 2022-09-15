@@ -1,5 +1,6 @@
-#include <stdio.h>
-int main (void)
+#include "main.h"
+
+void jack_bauer(void)
 {
 	int hour, minute;
 
