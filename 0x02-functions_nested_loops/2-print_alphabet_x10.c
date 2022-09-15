@@ -1,5 +1,6 @@
-#include <stdio.h>
-int main (void)
+#include <unistd.h>
+
+void print_alphabet_x10(void)
 {
 	int count = 0;
 	char letter;
@@ -7,14 +8,13 @@ int main (void)
 	while (count <= 9)
 	{
 		for (letter = 'a'; letter <= 'z'; letter++)
-		{
-			putchar(letter);
-		}
+
+			_putchar(letter);
 			
 		
-		putchar('\n');
-		count++;
+		_putchar('\n');
+
 		
 	}
-	return (0);
+
 }
